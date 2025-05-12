@@ -1,53 +1,28 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
-    "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.5.0",
-    "concurrently": "^6.2.1",
-    "express": "^4.18.2",
-    "icons": "^1.0.0",
-    "jspdf": "^2.3.1",
-    "jspdf-autotable": "^3.5.20",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-phone-number-input": "^3.1.52",
-    "react-router-dom": "^5.3.4",
-    "react-scripts": "^2.1.3",
-    "soloalert": "^1.1.10",
-    "styled-components": "^5.3.5",
-    "validator": "^13.6.0",
-    "web-vitals": "^1.1.2"
-  },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "concurrently \"npm start\" \"cd ../backend && npm run dev\""
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm run starnpm run start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"cd ../frontend && npm start\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.21"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
